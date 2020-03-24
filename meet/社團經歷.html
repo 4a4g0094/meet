@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>社團經歷</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+/*照片*/
+#fire {
+  margin:auto;
+  width:500px;
+  height:350px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  display:block;
+}
+
+#fire:hover {opacity: 0.7;}
+
+/* 照片背景 */
+.firebg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* 背景內容*/
+.firebg-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* 展開圖片內容 */
+#fireopen {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 300px;
+}
+
+/* Add Animation */
+
+/* 關閉紐 */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,/*hover是指標放上去圖片反映*/
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; /*指標的反應*/
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.tablink {
+  background-color: white ;
+  background-color:rgba(0,0,0,0.2); /* 背景透明 文字不透明 */
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}  
+    /* 上半部 */
+.tabcontent {
+  display: none;
+  padding: 50px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+}
+.啦啦隊{
+  display:block;
+  margin:auto;
+  width:500px;
+  height:400px;
+}
+#csie {
+  background-image: url( "images/club2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#work{
+  background-image: url( "images/club1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+h1,h2,p{
+  font-size: 30px;
+  text-align: left;
+}
+#a{ /*下面系學會的部分*/
+  background-image: url( "images/club2.jpg");
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#b{ /*下面創業社的部分*/
+  background-image: url( "images/club1.jpg");
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+    }
+.返回{
+  width:120px;
+  height:40px;
+  border:3px orange double;
+}/*&times代表X符號*/
+</style>
+<div id="csie" class="tabcontent">
+  <h1 style="text-align: center;">系學會</h1>
+</div>
+<div id="work" class="tabcontent">
+  <h1 style="text-align: center;">創業社</h1>
+</div>
+<button class="tablink" onclick="openCity('csie','a', this, 'e')" id="defaultOpen">系學會</button>
+<button class="tablink" onclick="openCity('work','b', this, 'f')">創業社</button>
+<div id="a" class="e">
+  <h2>資訊工程系啦啦隊</h2>
+    <p>這是我第一次接觸的活動。這個活動讓我認知原來團隊合作是一件多麼重要的事情，這次因為大家全心全意地投入與合作，因而有優異的表現。</p>
+    <p style="text-align:center;">這是當時的照片</p>
+  <img src="images/啦啦隊1.jpg" class="啦啦隊">
+    <p style="text-align:center;">這是我大二擔任吉祥物的影片</p>
+<center><iframe width="677" height="381" src="https://www.youtube.com/embed/w_oX_w0eQzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <h2>新生輔導員</h2>
+    <p>這也是我以前沒有接觸過的事務，我的最主要工作，就是要讓所有的新生，可以在短暫的3天中，快速了解大學這個充滿活力和青春的地方，這也是我第一次真正帶領他人的活動。</p> 
+  <h2>六系聯合系烤總召</h2>
+    <p>這個活動是我在大學系學會的最後一個活動，因為這個活動是需要一次帶領50～60人的活動，並且對象都是來自不同科系的同學，所以我們從原本的互不相識到慢慢磨和，再者由於我擔任的職位是總召，我也體會到原來要當一個決策管理者是一件很多麼不容易的事。</p> 
+<img id="fire" src="images/系考.jpg" alt="系烤">
+<a href="file:///C:/Users/88691/Desktop/%E5%B1%A5%E6%AD%B7/index.html"><button class="返回">返回</button></div></a>
+</div>
+<div id="myModal" class="firebg">                        
+  <span class="close">&times;</span> 
+  <img class="firebg-content" id="img01">
+  <div id="fireopen"></div>
+</div>
+<div id="b" class="e">
+</div>
+<script>/*系烤圖片js*/
+  var firebg = document.getElementById("myModal"); 
+  var img = document.getElementById("fire");
+  var firebgImg = document.getElementById("img01");
+  var fireopenText = document.getElementById("fireopen");
+  img.onclick = function(){
+    firebg.style.display = "block";
+    firebgImg.src = this.src;
+    fireopenText.innerHTML = this.alt;
+}
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() { 
+    firebg.style.display = "none";
+}
+</script>
+<script>/* tab js*/
+function openCity(cityName,xyz,elmnt,color) {
+var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");// tabcontent抓取頁面中的class="tabcontent"
+    for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}//計算tabcontent的長度並將這些class="tabcontent"都進行display:none隱藏的動作
+  e = document.getElementsByClassName("e");// e抓取頁面中的class="e"
+    for (i = 0; i < tabcontent.length; i++) {
+  e[i].style.display = "none";
+}//計算e的長度並將這些class="e"都進行display:none隱藏的動作 
+    tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+}
+document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+document.getElementById(xyz).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// 直接跳出
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
