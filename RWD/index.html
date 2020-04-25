@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <title>jQuery UI Dialog - Animation</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+    .text2 p{
+        text-align: center;
+        font-size: 20px;
+    }
+	img{
+		vertical-align: bottom;
+	}
+	.footer{
+		background-color: black;
+		color: white;
+		text-align: center;
+		padding: 10px;
+	}
+	.banner img{
+		width: 100%
+	}
+	.title h1{
+		text-align: center;
+		font-size: 40px;
+	}
+	.item-group{
+		width: 100%;
+		max-width: 1400px;
+		margin: auto;
+        background-color: whitesmoke;
+
+	}
+	title p{
+		font-size: 20px;
+		text-align: center;
+	}
+	.item{
+		margin: 0 10px 40px;
+	}
+	.item .pic img{ 
+		width: 100%
+	}
+	.item h1{
+		font-size: 30px;
+		text-align: center;
+	}
+	.title{
+		background-color: #cccccc;
+		margin: 0 0px 20px;
+		padding: 30px 20px;
+	}
+	.service .item .pic,
+	.service .item .text{
+		margin:  0;
+		background-color:thistle;
+        width: 50%;		
+	}
+    .service .item{
+			display: flex;
+		}
+
+	@media screen and (min-width:768px){
+		.item-group{
+			display: flex;
+		}
+		.service .item{
+			display: flex;
+		}
+		.service .item .pic,
+		.service .item .text{
+			width: 50%;
+			margin: 0;
+		}	
+		.service .item .text{
+			display: flex;
+			padding: 0px 20px;
+			box-sizing: border-box;
+			flex-direction: column;
+			justify-content: center;
+		}
+        .service p{
+            font-size: 35px;
+            padding: 20px 20px;
+        }
+        .item p{
+            font-size: 35px;
+            text-align: left;
+        }
+	}
+	
+</style>
+<body>
+	<div class="banner">
+		<img src = "IMAGE/RWD1.jpg" alt = "啦啦隊" >
+	</div>
+    <div class="service">
+        <div class="title">
+			<h1>歡迎來到我的網站</h1>
+		</div>
+        <div class="wrap">
+            <div class="item_group">
+                <div class="item">
+                    <div class="pic">
+                        <img src = "IMAGE/RWD2.jpg" alt = "大頭照" >
+                    </div>
+                    <div class="text">
+                    <h1>基本資料</h1>
+                    <p>姓名:洪晨庭</p>
+                    <p>性別:男</p>
+                    <p>畢業學校:南台科技大學</p>
+                    <p>擅長工具:HTML，CSS，JavaScript，jQuery，RWD，Bppstrap，PHP</p>
+                    <p>應徵職位:前端工程師</p>
+
+                    </div>	
+                    
+                </div>
+            </div>
+        </div>
+    </div>	
+
+
+	
+	<div class="about">
+		<div class="wrap">
+            <div class="title">
+                <h1>社團參與</h1>
+            </div>
+			<div class="item-group">
+				<div class="item">
+					<div class="pic">
+						<img src = "IMAGE/啦啦隊1.jpg" alt = "啦啦隊" >
+					</div>
+					<div class="text2">
+						<h1>啦啦隊(1)</h1>
+						<p>當時比賽結束的照片</p>
+					</div>	
+                </div>
+                <div class="item">
+					<div class="pic">
+						<img src = "IMAGE/啦啦隊2.jpg" alt = "啦啦隊" >
+					</div>
+					<div class="text2">
+						<h1>啦啦隊(2)</h1>
+						<p>當時比賽的照片</p>
+					</div>	
+                </div>
+                
+				<div class="item">
+					<div class="pic">
+						<img src = "IMAGE/啦啦隊3.jpg" alt = "啦啦隊" >
+					</div>
+					<div class="text2">
+                        <h1>啦啦隊(3)</h1>
+						<p>當時比賽的照片</p>
+						</div>	
+				</div>
+				<div class="item">
+					<div class="pic">
+						<img src = "IMAGE/啦啦隊4.jpg" alt = "啦啦隊" >
+					</div>
+					<div class="text2">
+                        <h1>啦啦隊(4)</h1>
+						<p>當時比賽的照片</p>
+					</div>	
+                </div> 
+                <div class="item">
+					<div class="pic">
+						<img src = "IMAGE/系考.jpg" alt = "系考" >
+					</div>
+					<div class="text2">
+                        <h1>系烤</h1>
+						<p>當時活動照片</p>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div class="about">
+	<div class="wrap">
+        <div class="title">
+            <h1>自傳</h1>
+        </div>
+		<div class="item_group">
+            <div class="item">
+				<div class="text">
+                    <h1>(一)簡介</h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;我是洪晨庭，畢業於南臺科技大學資訊工程系，我是一個很喜歡接觸不同事物以及接受挑戰的人。我的個性比較開放，不論是在課業或是在團隊事務方面，我都不吝說出自己的看法，因為我認為一個團隊就是需要來自大家不同的意見激盪以及接納彼此不同的想法，才能讓團隊更加進步。
+                    </p>
+				</div>
+				<div class="text">
+				    <h1>(二)求學過程</h1>
+				    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;高中時期我就讀於資訊科，在這期間接觸到了程式和電路板，我發現我個人對於程式這方面學習充滿熱情，所以在當時就決定往這方面發展，因此高職畢業後，繼續就讀於南臺科技大學資訊工程系。在大一時期學習到了許多的程式，從基本的C語言、Python，到JavaScript和PHP。在這許多的程式語言中，我個人對於網頁特別感興趣，可是網頁這方面相關的東西實在非常多，所以在當時，我常常點開自學網站去學習一些前端的知識。在大四下，我接觸到了PHP，發現原來這個程式可以結合網頁做出許多進階效果。
+                    </p>
+                </div>	
+                <div class="text">
+                    <h1>(三)社團經驗</h1>
+                        <div>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;在大學的社團中，我加入了資工系系學會，在系學會參加了許多的活動，其中三個讓我印象最深刻的活動摘要如下，從中我也獲得許多成長。</p>
+                        </div> 
+                        <div>
+                            <p>1.資訊工程系啦啦隊：這是我第一次接觸的活動。這個活動讓我認知原來團隊合作是一件多麼重要的事情，這次因為大家全心全意地投入與合作，因而有優異的表現。</p>
+                        </div>
+                        <div>
+                            <p>2.新生輔導員: 這也是我以前沒有接觸過的事務，我的最主要工作，就是要讓所有的新生，可以在短暫的3天中，快速了解大學這個充滿活力和青春的地方，這也是我第一次真正帶領他人的活動。</p>
+                        </div>
+                        <div>
+                            <p>3.六系聯合系烤總召：這個活動是我在大學系學會的最後一個活動，因為這個活動是需要一次帶領50～60人的活動，並且對象都是來自不同科系的同學，所以我們從原本的互不相識到慢慢磨和，再者由於我擔任的職位是總召，我也體會到原來要當一個決策管理者是一件很多麼不容易的事。</p>
+                        </div>
+                        <div>
+                            <p>進入大三後，漸漸地我也將系學會事務交給學弟妹，就在這個時候，我的好
+                            朋友同時也是創業社的社長，邀請我加入創業社，這是一位南臺科大老師所帶領的團隊，這社團最主要的目的就是幫助一些社會人士規劃活動，我也在這裡第一次接觸到幫別人寫JavaScript，雖然這個程式非常的簡單，但是我個人寫完後，還透過了jQuery加入了其他的功能，讓它的功能可以更完善。</p>
+                        </div>   
+                    
+                </div>	
+                <div class="text">
+                    <h1>(四)自我期許</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;希望可以將在大學期間所學到各項專業知識，實際滿足並運用於貴公司的需求。目前我也在家中自學其他的網頁相關語言，希望可以更快跟上業界的腳步，因為在資訊科的領域，唯有不斷的學習才能讓自己更加的進步，希望我有機會可以和 貴公司其他的員工一起互相切磋學習。
+                        非常感謝 貴公司願意花寶貴的時間閱讀我的履歷，誠心希望有機會能到貴公司服務，相信以自己的認真態度及精神，必能在工作上有良好的表現，並為公司帶來佳績。</p>
+                </div>	
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="about">
+	<div class="wrap">
+		<div class="title">
+			<h1>我的作品</h1>
+		</div>
+		<div class="item-group">
+			<div class="item">
+				<div class="pic">
+					<a href="N乘N.html"><img src = "IMAGE/N乘N.jpg" alt = "啦啦隊" ></a>
+				</div>
+				<div class="text">
+					<h1 >N乘N乘法表</h1>
+					<p>輸入一個數字N後，呈現出N*N的乘法表出來。</p>
+				</div>	
+            </div>
+            
+			<div class="item">
+				<div class="pic">
+					<a href="比大小.html"><img src = "IMAGE/比大小.jpg" alt = "啦啦隊" ></a>
+				</div>
+				<div class="text">
+					<h1>比大小遊戲</h1>
+					<p>電腦隨機產生一個介於1至10之間號碼，選擇比大或比小的比法，並加入radio增加耐玩性。</p>
+				</div>	
+			</div>
+			<div class="item">
+				<div class="pic">
+					<a href="創業社.html"><img src = "IMAGE/創業社.jpg" alt = "啦啦隊" ></a>
+				</div>
+				<div class="text">
+					<h1>創業社</h1>
+					<p>隨機產生5個數字，並希望能加入動畫，增加作品豐富度</p>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	 謝謝觀看
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+        <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script language="JavaScript">
+        function weiTime(){
+                　document.getElementById('show').innerHTML =getRandom(550) ;
+                　setTimeout('weiTime()',100);
+                }
+                function getRandom(x){return Math.floor(Math.random()*x);};
+        </script>
+        </head>
+        
+        
+        
+        <script>
+        function getRandom1(minNum, maxNum) {    //取得 minNum(最小值) ~ maxNum(最大值) 之間的亂數
+         return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
+        }
+        
+        function getRandomArray(minNum, maxNum, n) {    //隨機產生不重覆的n個數字
+        var rdmArray = [n];        //儲存產生的陣列
+        for(var i=0; i<n; i++) {
+        var rdm = 0;        //暫存的亂數
+        do {
+        var exist = false;            //此亂數是否已存在
+        rdm = getRandom1(minNum, maxNum);    //取得亂數
+        //檢查亂數是否存在於陣列中，若存在則繼續回圈
+        if(rdmArray.indexOf(rdm) != -1) exist = true;
+        } while (exist);    //產生沒出現過的亂數時離開迴圈
+        rdmArray[i] = rdm;
+        }
+        return rdmArray;
+        }
+        
+        
+        
+        $(document).ready(function() {
+        var max_fields      = 20; //maximum input boxes allowed
+        var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+        var add_button      = $(".add_field_button"); //Add button ID
+        var x = 0; //initlal text box count
+        $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+        x++; //text box increment
+        
+        var colorStr="";
+            //字符串的每一字符的范围
+            var randomArr=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+            //产生一个六位的字符串
+            for(var i=0;i<6;i++){
+                //15是范围上限，0是范围下限，两个函数保证产生出来的随机数是整数
+                colorStr+=randomArr[Math.ceil(Math.random()*(15-0)+0)];
+            }
+        
+        $(wrapper).append(document.getElementById('demo').innerHTML = "<div style=\"background-color:"+colorStr+";\">"+"第"+x+"次抽籤:"+getRandomArray(1,550,5)+"<br>"+"</div>"); //add input box
+        }
+        });
+        });
+        </script>
+        <body onload="weiTime()">
+        <div class="input_fields_wrap" style="font-size:100px";>
+        <button id="show"; class="add_field_button" style="display:block; margin:auto;width:300px;height:300px;font-size:150px";></button>
+        <div id="demo" style="font-size:100px;background-color:yellow;"></div>
+        </div>
+        </body>
+        </html>
