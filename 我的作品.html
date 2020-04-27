@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>我的作品</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+background-color: pink;
+  
+}
+h1, p, li{
+    text-align:center
+}
+.item .pic img{ 
+		width: 100%
+    }
+.返回{
+    width: 140px;
+    height: 50px;
+}
+.title{
+    font-size: 30px;
+    background-color: aquamarine;
+}
+
+.title1{
+    font-size: 35px;
+    animation-name: title2;
+    animation-duration: 10s;
+    color: #000;
+    animation-iteration-count: 9999999999999999999999999;
+}
+@keyframes title2{
+    0% {color: #000;}
+   25% {color: blue;}
+   50% {color:darkorange;}
+   75% {color:forestgreen;}
+   100%{color: peru;}
+}
+
+
+</style>
+<style>/*jquery應用*/
+.blue 
+{
+    background: yellow;
+}
+   
+.YELLOW 
+{
+    background: yellow;
+}
+</style>
+<style>/*猜數字*/
+
+@media only screen and (max-width: 600px) {
+p{
+    padding:15px 40px;
+    font-family:verdana;
+    font-size:10px;
+}
+h1{   
+    text-align: center;
+    font-family:verdana;
+    font-size:20px;
+    padding:15px 40px;
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.title1 h1{
+    font-size: 40px;
+    text-align: center;
+}
+}
+
+@media screen and (min-width:768px){
+	.item-group{
+		display: flex;
+	}
+    *{
+        margin: 0;
+        padding: 10px 10px 10px 10px ;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+	}
+    .item{
+        padding: 30px 20px;
+    }
+    p{
+        font-size: 20px;
+        font-family: fantasy;
+    }
+}
+
+</style>
+<body>
+<div>
+ <div>
+    <div class="title1">
+        <h1>我的作品</h1>
+    </div>
+    <div class="title">
+        <h1>N*N的乘法表</h1>
+    </div>
+<div>
+    <p>請寫一個網頁，輸入一個數字N後，呈現出N*N的乘法表出來。</p>
+</div>
+<div>
+<center><input id="numb"> </center>
+<center><button  type="button" onclick="myFunction1()">Submit</button></center>
+<table id="myTable">
+</table>
+</div>
+
+<div class="border">
+    <div class="title">
+        <h1>比大小</h1>
+    </div>
+<div>
+    <p>請設計一個網頁，讓你跟電腦比大小</p>
+</div>
+<div>
+    <center><p>請輸入一個數值<input type="text" id="a"></p></center>
+<div>
+<center><label for="contactChoice1">賭注</label></center>
+<center><input type="radio" name="b" id="rd1" value="100"> <label for="contactChoice1">100</label></center>
+<center><input type="radio" name="b" id="rd2" value="500"> <label for="contactChoice1">500</label></center>
+<center><input type="radio" name="b" id="rd3" value="1000"><label for="contactChoice1">1000</label></center>
+</div>
+<center><button type="button" onclick="myFunction2()">比大小</button></center>
+<p id="ME"></p>
+<p id="demo"></p>
+<p id="money"></p>
+<p id="WIN" style="font-size:300%" ></p>
+</div>
+</div>
+<div class="title">
+    <h1>jquery應用</h1>
+</div>
+<div>
+    <p>題目如下圖</p>
+</div>
+<div >
+    <center><img src = "images/hw.jpg" alt = "題目" style= "width:600px;height:400px;"></center> 
+</div>
+<div>
+    <center><button type="button" onclick='document.getElementById("demo1").innerHTML = "南台科技大學"'>產生一個H1的節點</button></center>
+</div>
+<div>
+    <center><button id="btn2">頁面背景設成黃色</button></center>
+</div>
+<div>
+    <center><button id="btn3">操作第二項目元素，背景變為黃色</button></center>
+</div>
+<div>
+    <h1 id="demo1"></h1>
+</div>
+<ul>
+<div>
+    <li><p>yahoo</p></li>
+</div>
+<div>
+    <li><p2>google</p2></li>
+</div>
+<div>
+    <li><p>apple</p></li>
+</div>
+<div>
+    <li><p>Microsoft</p></li>
+</div>
+<div>
+    <li><p>IBM</p></li>
+</div>
+</ul>
+
+
+<div class="title">
+    <h1>猜射字</h1>
+</div>
+<div>
+<p>請輸入一個數值<input type="text" id="e"></p>
+<center><button  type="button" onclick="myFunction()">猜數字</button></center>
+<p id="ME"></p>
+<p id="demo4"></p>
+<p id="hw4" style="font-size:300%" ></p>
+</div>
+
+<div class="title">
+    <h1>創業社</h1>
+</div>
+<body onload="weiTime()">
+<div class="input_fields_wrap" style="font-size:50px";>
+<button id="show"; class="add_field_button" style="display:block; margin:auto;width:100px;height:100px;font-size:50px";></button>
+<div id="demo5" style="font-size:50px;"></div>
+</div>
+</body>
+
+</body>
+<div class="title">
+    <h1>PHP上課內容</h1>
+</div>
+<div class="item-group">
+    <div class="item">
+      <div class="pic">
+        <img src = "images/顯示目錄.jpg" alt = "題目" style= "width:800px;height:400px;">
+      </div>
+      <div class="text2">
+        <h1>顯示C:/目錄</h1>
+      </div>	
+      </div>
+            
+    <div class="item" >
+      <div class="pic">
+        <img src = "images/判斷日期.jpg" alt = "題目" style= "width:800px;height:400px;">
+      </div>
+      <div class="text2">
+        <h1>判斷日期</h1>
+    </div>
+    </div>
+    <div class="item" >
+      <div class="pic">
+        <img src = "images/迴圈練習.jpg" alt = "題目" style= "width:800px;height:400px;">
+      </div>
+      <div class="text2">
+        <h1>迴圈練習</h1>
+        </div>	
+    </div>
+</div>
+
+<div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src = "images/數字計算.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>數字計算</h1>
+               
+            </div>	
+        </div>
+    
+        <div class="item">
+            <div class="pic">
+                <img src = "images/計算2的刺方.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>計算2的次方</h1>
+        
+            </div>	
+        </div>
+                     
+    <div class="item">
+            <div class="pic">
+                <img src = "images/陣列平均.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>迴圈練習</h1>
+
+            </div>	
+        </div>       
+</div> 
+<div class="item-group">
+    <div class="item">
+        <div class="pic">
+           <img src = "images/7-1.jpg" alt = "題目" style= "width:800px;height:400px;" >
+	    </div>
+	    <div class="text1">
+		    <h1>PHP應用題(題目)</h1>		    
+	    </div>	
+    </div>
+
+    <div class="item">
+        <div class="pic">
+		    <img src = "images/7-2.jpg" alt = "題目" style= "width:800px;height:400px;"> 
+	    </div>
+	    <div class="text1">
+		    <h1>PHP應用題(答案))</h1>
+	    </div>	
+    </div>
+</div>               
+<div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src = "images/BMI.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>BMI練習</h1>
+            </div>	
+        </div>
+    
+    <div class="item">
+        <div class="pic">
+            <img src = "images/BMI3.jpg" alt = "題目" style= "width:800px;height:400px;">
+        </div>
+           <div class="text1">
+                <h1>BMI練習</h1>
+
+            </div>	
+        </div>
+                    
+    <div class="item">
+        <div class="pic">
+            <img src = "images/BMI2.jpg" alt = "題目" style= "width:800px;height:400px;">
+        </div>
+        <div class="text1">
+            <h1>BMI練習</h1>
+        </div>	
+    </div>       
+</div> 
+<div class="item-group">
+    <div class="item">
+        <div class="pic">
+		    <img src = "images/8-1.jpg" alt = "題目" style= "width:800px;height:400px;">
+	    </div>
+	    <div class="text1">
+		    <h1>檔案寫入before</h1>
+	    </div>	
+    </div>
+    <div class="item">
+        <div class="pic">
+		    <img src = "images/8-3.jpg" alt = "題目" style= "width:800px;height:400px;">
+	    </div>
+	    <div class="text1">
+		    <h1>檔案寫入code</h1>
+	    </div>	
+    </div>                
+<div class="item">
+        <div class="pic">
+            <img src = "images/8-2.jpg" alt = "題目" style= "width:800px;height:400px;" >
+	    </div>
+	    <div class="text1">
+		    <h1>檔案寫入after</h1>
+	    </div>	
+    </div>
+</div>
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src = "images/9-1.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>大小寫轉換before</h1>
+            </div>	
+        </div>
+    
+        <div class="item">
+            <div class="pic">
+                <img src = "images/9-3.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>大小寫轉換 code</h1>
+            </div>	
+        </div>
+                    
+    <div class="item">
+            <div class="pic">
+                <img src = "images/9-2.jpg" alt = "題目" style= "width:800px;height:400px;">
+            </div>
+            <div class="text1">
+                <h1>大小寫轉換after</h1>
+            </div>	
+        </div>       
+</div> 
+<center><a href="index.html"><button class="返回">返回</button></div></a></center>
+</div>
+
+<script>//n*n乘法表
+function myFunction1(){
+var x, y, z;
+var outputStr ="答案" ;
+z = document.getElementById("numb").value;
+    if (isNaN(z)) alert("請輸入數字");
+else{
+    for(x=1;x<=z;x++){
+outputStr +="<tr>";
+    for(y=1;y<=z;y++){
+outputStr += "<td>" + x +"*"+ y + "=" + x*y + "</td>";
+}
+    outputStr +="</tr>";
+}
+document.getElementById("myTable").innerHTML =outputStr;  
+}
+}
+</script>
+
+<script>//比大小
+function myFunction2()
+{
+var x,y,z, //設變數 
+x=document.getElementById("a").value; //設定輸入數值
+    if (isNaN(x)||x>10||x<0) //判斷輸入數值是否可以使用
+{
+alert("請輸入0~10的數字");
+    return ;
+}
+document.getElementById("ME").innerHTML="你輸入的數字: "+x;
+y=Math.floor((Math.random() * 10) + 1);//設定電腦數值
+document.getElementById("demo").innerHTML ="電腦挑的數字: "+y;
+z=Math.floor((Math.random() * 10) + 1);//設定z變數 
+    
+var money
+    if(document.getElementById("rd1").checked)//判斷勾選項目
+{
+document.getElementById("money").innerHTML="賭注大小: "+"100"; 
+money=100;
+}
+    if(document.getElementById("rd2").checked)//判斷勾選項目
+{
+document.getElementById("money").innerHTML="賭注大小: "+"500";   
+money=500;
+}
+    if(document.getElementById("rd3").checked)//判斷勾選項目
+{
+document.getElementById("money").innerHTML="賭注大小: "+"1000";
+money=1000;
+}
+    if (z>6&&x>y){//判斷勝負
+document.getElementById("WIN").innerHTML="這次比大,你贏了 "+money;   
+document.getElementById("WIN").style.color="blue";
+document.getElementById("WIN").style.border= "5px dotted blue";
+}
+    else if(z>6&&x<=y){ //判斷勝負
+document.getElementById("WIN").innerHTML="這次比大,你輸了 "+money;  
+document.getElementById("WIN").style.color="red";
+document.getElementById("WIN").style.border= "5px dotted red";
+}
+    if (z<=6&&x<y){//判斷勝負
+document.getElementById("WIN").innerHTML="這次比小,你贏了 "+money;
+document.getElementById("WIN").style.color="blue";
+document.getElementById("WIN").style.border= "5px dotted blue";
+}   
+    else if(z<=6&&x>=y){ //判斷勝負
+document.getElementById("WIN").innerHTML="這次比小,你輸了 "+money;  
+document.getElementById("WIN").style.color="red";
+document.getElementById("WIN").style.border= "5px dotted red";
+}
+}
+</script>
+<script>/*jquery應用*/
+    $(document).ready(function(){
+    $("#btn2").click(function(){
+    $("body").addClass("blue");
+});
+});
+</script>
+<script>
+    $(document).ready(function(){
+    $("#btn3").click(function(){
+    $("p2").addClass("YELLOW");
+});
+});
+</script>
+<script>/*猜數字*/
+    function myFunction(){
+    var x,y,z, //設變數 
+    x=document.getElementById("e").value; //設定輸入數值
+    if (isNaN(x)||x>5||x<0) //判斷輸入數值是否可以使用
+    {
+    alert("請輸入0-5數字");
+    return ;
+    }
+    
+    y=Math.floor((Math.random() * 5) + 1);//設定電腦數值
+    // document.getElementById("123").innerHTML=y; 
+    
+    if (x>y){//判斷勝負
+    document.getElementById("hw4").innerHTML="你沒猜中，數字要小一點！";   
+    document.getElementById("hw4").style.color="blue";
+    document.getElementById("hw4").style.border= "5px dotted blue";
+    }
+    else if(x<y){ //判斷勝負
+    document.getElementById("hw4").innerHTML="你沒猜中，數字要大一點！";  
+    document.getElementById("hw4").style.color="red";
+    document.getElementById("hw4").style.border= "5px dotted red";
+    
+    }
+    else if(x=y){ //判斷勝負
+    document.getElementById("hw4").innerHTML="bingo";  
+    document.getElementById("hw4").style.color="yellow";
+    document.getElementById("hw4").style.border= "5px dotted yellow";
+    document.getElementById("demo4").innerHTML ="電腦挑的數字: "+y;
+}
+}
+</script>
+<script language="JavaScript">/*創業社*/
+function weiTime(){
+    document.getElementById('show').innerHTML =getRandom(550) ;
+    setTimeout('weiTime()',100);
+}
+    function getRandom(x){return Math.floor(Math.random()*x);};
+</script>
+<script>
+    function getRandom1(minNum, maxNum) {    //取得 minNum(最小值) ~ maxNum(最大值) 之間的亂數
+     return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
+}
+    
+    function getRandomArray(minNum, maxNum, n) {    //隨機產生不重覆的n個數字
+    var rdmArray = [n];        //儲存產生的陣列
+    for(var i=0; i<n; i++) {
+    var rdm = 0;        //暫存的亂數
+    do {
+    var exist = false;            //此亂數是否已存在
+    rdm = getRandom1(minNum, maxNum);    //取得亂數
+    //檢查亂數是否存在於陣列中，若存在則繼續回圈
+    if(rdmArray.indexOf(rdm) != -1) exist = true;
+    } while (exist);    //產生沒出現過的亂數時離開迴圈
+    rdmArray[i] = rdm;
+}
+    return rdmArray;
+}    
+    $(document).ready(function() {
+    var max_fields      = 100; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+    var x = 0; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+    e.preventDefault();
+    if(x < max_fields){ //max input box allowed
+    x++; //text box increment
+   
+    var colorStr="";
+    //字符串的每一字符的范围
+    var randomArr=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+    //产生一个六位的字符串
+    for(var i=0;i<6;i++){
+    //15是范围上限，0是范围下限，两个函数保证产生出来的随机数是整数
+    colorStr+=randomArr[Math.ceil(Math.random()*(15-0)+0)];
+}    
+$(wrapper).append(document.getElementById('demo5').innerHTML = "<div>"+"第"+x+"次抽籤:"+getRandomArray(1,550,5)+"<br>"+"</div>"); //add input box
+}
+});
+});
+</script>
+  </html>

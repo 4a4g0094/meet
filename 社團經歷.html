@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>社團經歷</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<style> 
+/*照片*/
+#fire {
+  margin:auto;
+  width:500px;
+  height:350px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  display:block;
+}
+
+#fire:hover {opacity: 0.7;}
+
+/* 照片背景 */
+.firebg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0; 
+  top: 0; 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+/* 背景內容*/
+.firebg-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* 展開圖片內容 */
+#fireopen {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 400px;
+}
+/* 關閉紐 */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,/*hover是指標放上去圖片反映*/
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; /*指標的反應*/
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.tablink {
+  background-color: white ;
+  background-color:rgba(0,0,0,0.2); /* 背景透明 文字不透明 */
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}  
+    /* 上半部 */
+.tabcontent {
+  display: none;
+  padding: 50px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#csie {
+  background-image: url( "images/club2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#work{
+  background-image: url( "images/club1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+h1,h2,p{
+  font-size: 30px;
+  text-align: left;
+}
+#a{ /*下面系學會的部分*/
+  background-image: url( "images/club2.jpg");
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#b{ /*下面創業社的部分*/
+  background-image: url( "images/club1.jpg");
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+    }
+.返回{
+  width:120px;
+  height:40px;
+  border:3px orange double;
+}/*&times代表X符號*/
+
+h1{
+  font-size: 35px;   
+  text-align: center; 
+}
+.item p{
+  font-size: 20px;
+  text-align: center;
+}
+#animitions1{
+    animation-name: animitions2;
+    animation-duration: 5s;
+}
+@keyframes animitions1{
+    0% {opacity: 1;}
+   25% {opacity: 1;}
+   50% {opacity: 1;}
+   75% {opacity: 1;}
+   100%{opacity: 1;}
+}
+#animitions2{
+    animation-name: animitions2;
+    animation-duration: 10s;
+}
+@keyframes animitions2{
+    0% {opacity: 0;}
+   25% {opacity: 1;}
+   50% {opacity: 1;}
+   75% {opacity: 1;}
+   100%{opacity: 1;}
+}
+#animitions3{
+    animation-name: animitions3;
+    animation-duration: 10s;
+}
+@keyframes animitions3{
+    0% {opacity: 0;}
+   25% {opacity: 0;}
+   50% {opacity: 1;}
+   75% {opacity: 1;}
+   100%{opacity: 1;}
+}
+#animitions4{
+    animation-name: animitions4;
+    animation-duration: 10s;
+}
+@keyframes animitions4{
+    0% {opacity: 0;}
+   25% {opacity: 0;}
+   50% {opacity: 0;}
+   75% {opacity: 1;}
+   100%{opacity: 1;}
+}
+
+.item p{
+  font-size: 20px;
+  
+}
+@media only screen and (max-width: 600px) {
+p{
+    padding:15px 40px;
+    font-family:verdana;
+    font-size:10px;
+}
+h1{   
+    text-align: center;
+    font-family:verdana;
+    font-size:20px;
+
+}
+.item p{
+  font-size: 15px;
+  
+}
+}
+img {
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  height: auto;
+}
+
+.video-container {
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+
+    padding-top: 30px;
+
+    height: 0;
+
+    overflow: hidden;
+
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+
+  position: absolute;
+
+  top: 0;left: 0;
+
+    width: 100%;
+
+  height: 100%;
+}
+
+@media screen and (min-width:768px){
+		.item-group{
+			display: flex;
+	}
+}
+</style>
+<div id="csie" class="tabcontent">
+  <h1 style="text-align: center;">系學會</h1>
+</div>
+<div id="work" class="tabcontent">
+  <h1 style="text-align: center;">創業社</h1>
+</div>
+  <button class="tablink" onclick="openCity('csie','a', this, 'e')" id="defaultOpen">系學會</button>
+  <button class="tablink" onclick="openCity('work','b', this, 'f')">創業社</button>
+<div id="a" class="e">
+  <h1 style="text-align: center;">資訊工程系啦啦隊</h1>
+    <p>這是我第一次接觸的活動。這個活動讓我認知原來團隊合作是一件多麼重要的事情，這次因為大家全心全意地投入與合作，因而有優異的表現。</p>
+<div>
+  <div class="item-group">
+    <div class="item" id = "animitions1">
+      <div class="pic">
+        <img src = "images/啦啦隊1.jpg" alt = "啦啦隊" >
+      </div>
+      <div class="text2">
+        <h1>啦啦隊(1)</h1>
+        <p>當時比賽結束的照片</p>
+      </div>	
+            </div>
+    <div class="item" id = "animitions2">
+      <div class="pic">
+        <img src = "images/啦啦隊2.jpg" alt = "啦啦隊" >
+      </div>
+      <div class="text2">
+        <h1>啦啦隊(2)</h1>
+        <p>當時比賽的照片</p>
+      </div>	
+      </div>
+            
+    <div class="item" id = "animitions3">
+      <div class="pic">
+        <img src = "images/啦啦隊3.jpg" alt = "啦啦隊" >
+      </div>
+      <div class="text2">
+        <h1>啦啦隊(3)</h1>
+        <p>當時比賽的照片</p>
+    </div>
+    </div>
+    <div class="item" id = "animitions4">
+      <div class="pic">
+        <img src = "images/啦啦隊4.jpg" alt = "啦啦隊" >
+      </div>
+      <div class="text2">
+        <h1>啦啦隊(4)</h1>
+        <p>當時比賽的照片</p>
+        </div>	
+    </div>
+</div>
+    <h1 style="text-align:center;">這是我大二擔任吉祥物的影片</h1>
+      <center>
+        <div class="video-container">
+        <iframe width="677" height="381" src="https://www.youtube.com/embed/w_oX_w0eQzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </center>
+  <h1 style="text-align: center;">新生輔導員</h1>
+    <p>這也是我以前沒有接觸過的事務，我的最主要工作，就是要讓所有的新生，可以在短暫的3天中，快速了解大學這個充滿活力和青春的地方，這也是我第一次真正帶領他人的活動。</p> 
+  <h1 style="text-align: center;">六系聯合系烤總召</h1>
+    <p>這個活動是我在大學系學會的最後一個活動，因為這個活動是需要一次帶領50～60人的活動，並且對象都是來自不同科系的同學，所以我們從原本的互不相識到慢慢磨和，再者由於我擔任的職位是總召，我也體會到原來要當一個決策管理者是一件很多麼不容易的事。</p> 
+      <img id="fire" src="images/系考.jpg" alt="系烤">
+  
+  <center><a href="index.html"><button class="返回">返回</button></div></a></center>
+</div>
+<div id="myModal" class="firebg">                        
+  <span class="close">&times;</span> 
+  <img class="firebg-content" id="img01">
+  <div id="fireopen"></div>
+</div>
+</div>
+<div id="b" class="e">
+<h1 style="text-align: center;">創業社</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;這是一個社團的指導老師是由台南婦聯會的總幹事帶領的，主要負責對外辦活動的社團，在這個社團舉辦活動中，大部分都是以負責協助台南婦聯會為主，也在這個社團中看到許多知名的政治人物。</p>
+<h1>例如</h1>
+<ul class="wrap">
+  <li>台灣總統:蔡英文</li>
+  <li>台南市議員:謝龍介</li>
+  <li>台北市長:柯文哲</li>
+</ul>
+<h1 style="text-align: center;">我也在這個社團第一次有機會幫外面的程式</h1>
+<center><a href="我的作品.html"><img  src="images/創業社.jpg" alt="圖片" width="500" height="400"></a></center> 
+
+<h1 style="text-align: center;">2017國際蘭展</h1 >
+<p>&nbsp;&nbsp;&nbsp;&nbsp;這是一個我在創業社所參加的活動中再有印象的一個，因為首先如果沒參加這個活動，我個人也不知道原來在台南有一個那麼漂亮的大活動，也由於當時進場的門票相當的不便宜，但我卻能夠免費看到，也算是非常的幸運。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在當時我們因為有指導老師的關係，我們所負責照顧的區域是全場館最重點的區域，我們在當時最只要的工作是顧好藝術品，提醒顧客不要碰觸到藝術品，並且販賣周邊商品，但是我們老師最主要是希望我們能透過這個活動，精進自己介紹的能力，因為許多的顧客都不知道藝術家所要表達的意義，所以我們老師事先給我們關於他的新聞稿，希望能讓我們可以大膽地介紹。</p>
+<p></p>
+<center><a href="index.html"><button class="返回">返回</button></div></a></center>
+</div>
+  
+<script>/*系烤圖片js*/
+  var firebg = document.getElementById("myModal"); 
+  var img = document.getElementById("fire");
+  var firebgImg = document.getElementById("img01");
+  var fireopenText = document.getElementById("fireopen");
+  img.onclick = function(){
+    firebg.style.display = "block";
+    firebgImg.src = this.src;
+    fireopenText.innerHTML = this.alt;
+}
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() { 
+    firebg.style.display = "none";
+}
+</script>
+<script>/* tab js*/
+function openCity(cityName,xyz,elmnt,color) {
+var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");// tabcontent抓取頁面中的class="tabcontent"
+    for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}//計算tabcontent的長度並將這些class="tabcontent"都進行display:none隱藏的動作
+  e = document.getElementsByClassName("e");// e抓取頁面中的class="e"
+    for (i = 0; i < tabcontent.length; i++) {
+  e[i].style.display = "none";
+}//計算e的長度並將這些class="e"都進行display:none隱藏的動作 
+    tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+}
+document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+document.getElementById(xyz).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// 直接跳出
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+
+

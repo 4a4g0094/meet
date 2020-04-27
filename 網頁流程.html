@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的個人檔案</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+body{
+    background-color: cornsilk;
+    animation-name: animitions2;
+    animation-duration: 20s;
+    animation-iteration-count: 9999999999999999999999999;
+}
+@keyframes animitions2{
+    0% {background-color: rgb(179, 255, 172);}
+   25% {background-color: darkkhaki;}
+   50% {background-color: lightskyblue;}
+   75% {background-color: yellowgreen;}
+   100%{background-color: cornsilk;}
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    padding:  20px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    padding:  20px;
+}
+table,th{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+}
+td{
+    width: 50%;
+    border: 1px solid black;
+}
+p{
+    font-size: 25px;
+    text-align: center;
+}
+#nav{
+    width: 100%;
+    font-family:verdana;
+    padding:15px 40px;
+    font-size:15px;
+    text-align: right;
+    padding: 10px;
+    background-color:darkgoldenrod;
+    color:white;
+}
+img{
+    display:block; 
+    margin:auto;
+    width: 50%;
+}
+@media only screen and (max-width: 600px) {
+p{
+    padding:15px 40px;
+    font-family:verdana;
+    font-size:15px;
+}
+h1{   
+    text-align: center;
+    font-family:verdana;
+    font-size:30px;
+
+}
+}
+img {
+  max-width: 100%
+}
+</style>   
+
+<body>
+    <div1>
+        <div id = "nav">
+            <nav>
+            <a href="#one">個人資料</a> |
+            <a href="#two">社團經歷</a> |
+            <a href="#three">我的自傳</a> |
+            <a href="#four">我的作品集</a>
+            <a href="#five">網頁流程</a>
+            <a href="#six">留言板</a>
+            </nav>
+        </div>
+        <h1>網頁流程</h1>
+        <div>
+        <table>
+            <tr>
+                <th colspan="2">使用工具</th>
+            </tr>
+            <tr>
+                <td><img src = "images/xampp.jpg" alt = "xampp" style= "width:600px;height:400px;"></td>
+                <td><img src = "images/code.jpg" alt = "code" style= "width:600px;height:400px;"></td>
+            </tr>
+        </table>
+        </div>
+        <div>
+            <div>
+                <h1 >首頁</h1>
+            </div>
+            <div>
+                <p>
+                    我是透過<mark>Boostrap</mark>所開發的首頁，因為這個框架可以透過<mark>jumbotron，col</mark>快速調整出網頁在手機和電腦上的排版，所以我決定使用這個框架來做出的我首頁。
+                </p>
+            </div>
+        </div>
+        <div>   
+            <div id ="one">
+                <h1>個人資料</h1>
+            </div> 
+            <div>
+                <p>
+                    我是利用<mark>boostrap</mark>框架所完成的表格，我最主要是希望能利用這個表格來增進Boostrap的實力，因為Boostrap這個部分大多都是靠自己學習的得來的。
+                </p>
+                <img src = "images/個人資料1.jpg" alt = "個人資料" style= "width:600px;height:400px;">
+            </div>    
+        </div>
+        <div>
+            <div>
+                <h1 id ="two">社團經歷</h1>
+            </div>
+            <div>
+                <p>
+                    我是先透過<mark>JavaScript</mark>來做出Tab的效果，來將我兩個社團的經歷分開，然後再套入一些<mark>CSS</mark>來修改我的網頁內容，例如一些簡單的動畫。
+                </p>
+                <table>
+                    <tr>
+                        <td><img src = "images/社團1.jpg" alt = "系學會" style= "width:600px;height:400px;"></td>
+                        <td><img src = "images/社團2.jpg" alt = "創業社" style= "width:600px;height:400px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1 id ="three">我的自傳</h1>
+            </div>
+            <div>
+                <p>
+                    我的自傳主要透過簡單的<mark>div</mark>元素以及<mark>nav</mark>元素，將我的自傳內容一段一段的分開，然後加上一些簡單的<mark>CSS</mark>的動畫，以及用<mark>RWD</mark>增加網頁豐富度。
+                </p>
+                <img src = "images/自傳.jpg" alt = "自傳" style= "width:600px;height:400px;">
+            </div>
+        </div>
+            <div>
+                <h1 id ="four">我的作品集</h1>
+            </div>
+                <h2>JS和jQuery</h2>
+            <div>
+                <h1>n*n乘法表</h1>
+            </div>
+                <p>
+                    這是我第一次學習js所接觸到的程式，他將輸入的值，帶入2個for迴圈和table來幫助排版。
+                </p> 
+            <div>
+                <h1>比大小遊戲</h1>
+                <p>
+                    這是一個利用判斷以及亂數來完成的程式，每當我們輸入一個數字後，程式中的也會自己用Random產生一個亂數，這個時候他就會開始自己比大小，並顯現出結果，我還加了radio來增添這個遊戲的豐富度。
+                </p> 
+            </div>
+            <div>
+                <h1>jquery應用</h1> 
+                <p>
+                    這個是一個簡單的利用jquery的<mark>addClass</mark>指令來完成所需要的指令，
+                </p> 
+            </div>
+            <div>
+                <h1>猜數字</h1>
+            <p>
+                這一個比大小的類型，長得差不多，一樣輸入一個數字，然後利用一個簡單的判斷，判斷我輸入的值是否跟電腦隨機所慘生的值是否相同，然後依照個每次的結果所輸出的內容皆不相同。
+            </p>
+            </div>
+            <div>
+                <h1>創業社</h1>
+                <p>
+                    這原本是一個隨機產生5個0~550的亂數，但後來他們希望可以加上一點動畫，於是便利用Js寫出一個Random，並透過body onload讓他自動執行，並設定每秒出現一次，並將它出現在按鈕裡，來完成一個動畫感覺，最後再利用jquery的append來增加特色。 
+                </p>
+            </div>      
+            <div>
+                <h2>PHP</h2>
+            </div>
+            <div>
+                <h1>PHP顯示c:/</h1>
+                <p>
+                    這是利用php的opendir指令所完成的
+                </p>
+            </div>
+            <div>
+                <h1>判斷日期</h1>
+                <p>
+                    這是利用php的date指令所完成的
+                </p>
+            </div>
+            <div>
+                <h1>迴圈練習</h1>
+                <p>
+                    增進迴圈的能力
+                </p>
+            </div>
+            <div>
+                <h1>數字計算</h1>
+                <p>
+                    我是直接利用for迴圈來幫助快速完成pow()的計算
+                </p>
+            </div>
+            <div>
+                <h1>計算2的次方</h1>
+                <p>
+                    利用for判斷他還能不能被2整除，並只要每成功整除一次，就讓自己所設定的變數+1一次
+                </p>
+            </div>
+            <div>
+                <h1>陣列平均</h1>
+                <p>
+                    利用到array_sum()和count()來快速完成的指令
+                <p>
+            </div>
+            <div>
+                <h1>PHP應用題</h1>
+                <p>
+                    把學生和他們各自的分數都換成陣列並透過for來算出他們各自相加的分數
+                <p>
+            </div>
+            <div>
+                <h1>BMI計算</h1>
+                <p>
+                    練習兩個PHP的內容互丟
+                <p>
+            </div>
+            <div>
+                <h1>檔案寫入</h1>
+                <p>
+                    透過fopen的開檔和寫入，將我們原來的TXT檔的資料寫入另外一個txt檔
+                <p>
+            </div>
+            <div>
+                <h1>大小寫轉換</h1>
+                <p>
+                    透過fopen的開檔和寫入，但是要透過strtoupper將原來txt的字母大小寫轉換並寫入另一個txt檔
+                <p>
+            </div> 
+    </div1>
+</body>
+</html>
