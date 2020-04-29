@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "南台科技大學"'>產生一個H1的節點</button>
+<script>
+$(document).ready(function(){
+$("#btn2").click(function(){
+ $("body").addClass("blue");
+ });
+});
+</script>
+<script>
+    $(document).ready(function(){
+    $("#btn3").click(function(){
+    $("p2").addClass("YELLOW");
+});
+});
+</script>
+<style>
+.blue {
+    background: yellow;
+}
+</style>
+<style>
+        .YELLOW {
+            background: yellow;
+        }
+        </style>
+<div><button id="btn2">頁面背景設成黃色</button></div>
+<div><button id="btn3">操作第二項目元素，背景變為黃色</button></div>
+<div><H1 id="demo"></H1></div>
+
+<ul>
+<div><li><p>yahoo</p></li></div>
+<div><li><p2>google</p2></li></div>
+<div><li><p>apple</p></li></div>
+<div><li><p>Microsoft</p></li></div>
+<div><li><p>IBM</p></li></div>
+</ul>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

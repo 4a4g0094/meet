@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(){
+var x, y, z;
+var outputStr ="答案" ;
+z = document.getElementById("numb").value;
+if (isNaN(z)) alert("請輸入數字");
+else{
+for(x=1;x<=z;x++){
+outputStr +="<tr>";
+for(y=1;y<=z;y++){
+outputStr += "<td>" + x +"*"+ y + "=" + x*y + "</td>";
+}
+outputStr +="</tr>";
+}
+document.getElementById("myTable").innerHTML =outputStr;  
+}
+}
+</script>
+</head>
+<body>
+<div>
+<h1>N*N乘法表</h1>
+<h2>請輸入一個數字</h2>
+<input id="numb">
+<button type="button" onclick="myFunction()">Submit</button>
+<table id="myTable">
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+html>
+<head>
+<title>比大小遊戲</title>
+<style>
+#WIN{
+    background-color:orange
+}
+</style>
+</head>
+<body>
+<p>請輸入一個數值<input type="text" id="a"></p>
+<div>
+<label for="contactChoice1">賭注</label>
+<input type="radio" name="b" id="rd1" value="100"> <label for="contactChoice1">100</label>
+<input type="radio" name="b" id="rd2" value="500"> <label for="contactChoice1">500</label>
+<input type="radio" name="b" id="rd3" value="1000"><label for="contactChoice1">1000</label>
+</div>
+<button type="button" onclick="myFunction()">比大小</button>
+<p id="ME"></p>
+<p id="demo"></p>
+<p id="money"></p>
+<p id="WIN" style="font-size:300%" ></p>
+<script>
+function myFunction(){
+var x,y,z, //設變數 
+x=document.getElementById("a").value; //設定輸入數值
+if (isNaN(x)||x>10||x<0) //判斷輸入數值是否可以使用
+{
+alert("請輸入數字");
+return ;
+}
+document.getElementById("ME").innerHTML="你輸入的數字: "+x;
+y=Math.floor((Math.random() * 10) + 1);//設定電腦數值
+document.getElementById("demo").innerHTML ="電腦挑的數字: "+y;
+z=Math.floor((Math.random() * 10) + 1);//設定z變數 
+
+var money
+if(document.getElementById("rd1").checked)//判斷勾選項目
+    {document.getElementById("money").innerHTML="賭注大小: "+"100"; 
+    money=100;
+}
+if(document.getElementById("rd2").checked)//判斷勾選項目
+    {document.getElementById("money").innerHTML="賭注大小: "+"500";   
+money=500;
+}
+if(document.getElementById("rd3").checked)//判斷勾選項目
+    {document.getElementById("money").innerHTML="賭注大小: "+"1000";
+money=1000;
+}
+if (z>6&&x>y){//判斷勝負
+document.getElementById("WIN").innerHTML="這次比大,你贏了 "+money;   
+document.getElementById("WIN").style.color="blue";
+document.getElementById("WIN").style.border= "5px dotted blue";
+}
+else if(z>6&&x<=y){ //判斷勝負
+document.getElementById("WIN").innerHTML="這次比大,你輸了 "+money;  
+document.getElementById("WIN").style.color="red";
+document.getElementById("WIN").style.border= "5px dotted red";
+}
+if (z<=6&&x<y){//判斷勝負
+document.getElementById("WIN").innerHTML="這次比小,你贏了 "+money;
+document.getElementById("WIN").style.color="blue";
+document.getElementById("WIN").style.border= "5px dotted blue";
+}   
+else if(z<=6&&x>=y){ //判斷勝負
+document.getElementById("WIN").innerHTML="這次比小,你輸了 "+money;  
+document.getElementById("WIN").style.color="red";
+document.getElementById("WIN").style.border= "5px dotted red";
+}
+}
+</script>
+</body>
+</html>

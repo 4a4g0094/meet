@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>比大小遊戲</title>
+    <style>
+    #WIN{
+background-color:orange
+    }
+</style>
+</head>
+<body>
+<p>請輸入一個數值<input type="text" id="a"></p>
+
+<button type="button" onclick="myFunction()">猜數字</button>
+<p id="ME"></p>
+<p id="demo4"></p>
+<p id="WIN" style="font-size:300%" ></p>
+<script>
+function myFunction(){
+var x,y,z, //設變數 
+x=document.getElementById("a").value; //設定輸入數值
+if (isNaN(x)||x>100||x<0) //判斷輸入數值是否可以使用
+{
+alert("請輸入0-100數字");
+return ;
+}
+
+y=Math.floor((Math.random() * 100) + 1);//設定電腦數值
+// document.getElementById("123").innerHTML=y; 
+
+if (x>y){//判斷勝負
+document.getElementById("WIN").innerHTML="你沒猜中，數字要小一點！";   
+document.getElementById("WIN").style.color="blue";
+document.getElementById("WIN").style.border= "5px dotted blue";
+}
+else if(x<y){ //判斷勝負
+document.getElementById("WIN").innerHTML="你沒猜中，數字要大一點！";  
+document.getElementById("WIN").style.color="red";
+document.getElementById("WIN").style.border= "5px dotted red";
+
+}
+else if(x=y){ //判斷勝負
+document.getElementById("WIN").innerHTML="bingo";  
+document.getElementById("WIN").style.color="yellow";
+document.getElementById("WIN").style.border= "5px dotted yellow";
+document.getElementById("demo4").innerHTML ="電腦挑的數字: "+y;
+}
+}
+</script>
+</body>
+</html>
